@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Real or Fake News | Analysis Result</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f5f5f5;
+      text-align: center;
+    }
+
+    h1 {
+      color: #337ab7;
+      margin-top: 40px;
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .result-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 5px;
+      width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .result-text {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .result-icon {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .real-icon {
+      color: #337ab7;
+    }
+
+    .fake-icon {
+      color: #dc3545;
+    }
+
+.action-buttons {
+      margin-top: 20px;
+    }
+
+  a {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #337ab7;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #235273;
+    }
+  </style>
+</head>
+<body>
+  <h1>Real or Fake News</h1>
+  <div class="result-container">
+    <p>The text you entered:</p>
+    <p>{{ text }}</p>
+    <p>The model predicts that this text is:</p>
+    <p class="result-text">
+      <i class="result-icon {{ result_icon }}"></i> {{ result }}
+    </p>
+  </div>
+  <div class="action-buttons">
+    <a href="/">Analyze Again</a>
+  </div>
+</body>
+</html>

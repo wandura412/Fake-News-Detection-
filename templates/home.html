@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real or Fake News | Detect News Accuracy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #337ab7;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+      margin-bottom: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    input[type="submit"] {
+      background-color: #337ab7;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #235273;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Real or Fake News</h1>
+    <p>Unsure about the authenticity of a news article? Paste it here to check!</p>
+    <form action="/predict" method="post">
+      <label for="text">Enter text:</label>
+      <textarea id="text" name="text" rows="10" placeholder="Paste your news article here" required></textarea>
+      <input type="submit" value="Check Accuracy">
+    </form>
+  </div>
+</body>
+</html>
+
